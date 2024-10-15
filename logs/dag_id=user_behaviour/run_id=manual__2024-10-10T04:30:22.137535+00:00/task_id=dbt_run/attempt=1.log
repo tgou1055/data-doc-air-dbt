@@ -1,0 +1,40 @@
+[2024-10-10T04:31:01.792+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-10T04:31:01.818+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_behaviour.dbt_run manual__2024-10-10T04:30:22.137535+00:00 [queued]>
+[2024-10-10T04:31:01.832+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_behaviour.dbt_run manual__2024-10-10T04:30:22.137535+00:00 [queued]>
+[2024-10-10T04:31:01.832+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-10-10T04:31:01.847+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): dbt_run> on 2024-10-10 04:30:22.137535+00:00
+[2024-10-10T04:31:01.853+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=200) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-10T04:31:01.854+0000] {standard_task_runner.py:63} INFO - Started process 201 to run task
+[2024-10-10T04:31:01.855+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_behaviour', 'dbt_run', 'manual__2024-10-10T04:30:22.137535+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/user_behaviour.py', '--cfg-path', '/tmp/tmpub_24b7l']
+[2024-10-10T04:31:01.856+0000] {standard_task_runner.py:91} INFO - Job 8: Subtask dbt_run
+[2024-10-10T04:31:01.903+0000] {task_command.py:426} INFO - Running <TaskInstance: user_behaviour.dbt_run manual__2024-10-10T04:30:22.137535+00:00 [running]> on host 10fc3afc5804
+[2024-10-10T04:31:02.005+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@***.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_behaviour' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2024-10-10T04:30:22.137535+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-10T04:30:22.137535+00:00'
+[2024-10-10T04:31:02.006+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-10T04:31:02.019+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-10-10T04:31:02.020+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'dbt run --project-dir /opt/***/dbt/data_pipeline --profiles-dir /opt/***/dbt/data_pipeline/profiles/']
+[2024-10-10T04:31:02.030+0000] {subprocess.py:86} INFO - Output:
+[2024-10-10T04:31:02.963+0000] {subprocess.py:93} INFO - [0m04:31:02  Running with dbt=1.8.7
+[2024-10-10T04:31:04.623+0000] {subprocess.py:93} INFO - [0m04:31:04  Registered adapter: snowflake=1.8.3
+[2024-10-10T04:31:04.962+0000] {subprocess.py:93} INFO - [0m04:31:04  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2024-10-10T04:31:04.963+0000] {subprocess.py:93} INFO - There are 1 unused configuration paths:
+[2024-10-10T04:31:04.963+0000] {subprocess.py:93} INFO - - models.data_pipeline.marts
+[2024-10-10T04:31:05.252+0000] {subprocess.py:93} INFO - [0m04:31:05  Found 2 models, 3 data tests, 2 sources, 454 macros
+[2024-10-10T04:31:05.257+0000] {subprocess.py:93} INFO - [0m04:31:05
+[2024-10-10T04:31:07.155+0000] {subprocess.py:93} INFO - [0m04:31:07  Concurrency: 10 threads (target='dev')
+[2024-10-10T04:31:07.156+0000] {subprocess.py:93} INFO - [0m04:31:07
+[2024-10-10T04:31:07.178+0000] {subprocess.py:93} INFO - [0m04:31:07  1 of 1 START sql view model dbt_schema.stg_tpch_orders ......................... [RUN]
+[2024-10-10T04:31:10.094+0000] {subprocess.py:93} INFO - [0m04:31:10  1 of 1 OK created sql view model dbt_schema.stg_tpch_orders .................... [[32mSUCCESS 1[0m in 2.91s]
+[2024-10-10T04:31:10.103+0000] {subprocess.py:93} INFO - [0m04:31:10
+[2024-10-10T04:31:10.104+0000] {subprocess.py:93} INFO - [0m04:31:10  Finished running 1 view model in 0 hours 0 minutes and 4.85 seconds (4.85s).
+[2024-10-10T04:31:10.151+0000] {subprocess.py:93} INFO - [0m04:31:10
+[2024-10-10T04:31:10.152+0000] {subprocess.py:93} INFO - [0m04:31:10  [32mCompleted successfully[0m
+[2024-10-10T04:31:10.153+0000] {subprocess.py:93} INFO - [0m04:31:10
+[2024-10-10T04:31:10.153+0000] {subprocess.py:93} INFO - [0m04:31:10  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[2024-10-10T04:31:11.493+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-10-10T04:31:11.494+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-10T04:31:11.523+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_behaviour, task_id=dbt_run, run_id=manual__2024-10-10T04:30:22.137535+00:00, execution_date=20241010T043022, start_date=20241010T043101, end_date=20241010T043111
+[2024-10-10T04:31:11.542+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-10-10T04:31:11.563+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-10T04:31:11.565+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

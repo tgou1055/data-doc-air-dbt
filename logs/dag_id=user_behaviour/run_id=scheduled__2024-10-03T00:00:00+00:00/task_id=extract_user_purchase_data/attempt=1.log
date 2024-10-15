@@ -1,0 +1,99 @@
+[2024-10-11T15:00:36.170+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-11T15:00:36.194+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_behaviour.extract_user_purchase_data scheduled__2024-10-03T00:00:00+00:00 [queued]>
+[2024-10-11T15:00:36.204+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_behaviour.extract_user_purchase_data scheduled__2024-10-03T00:00:00+00:00 [queued]>
+[2024-10-11T15:00:36.204+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2024-10-11T15:00:36.216+0000] {taskinstance.py:2330} INFO - Executing <Task(PostgresOperator): extract_user_purchase_data> on 2024-10-03 00:00:00+00:00
+[2024-10-11T15:00:36.223+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=147) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-11T15:00:36.225+0000] {standard_task_runner.py:63} INFO - Started process 149 to run task
+[2024-10-11T15:00:36.225+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_behaviour', 'extract_user_purchase_data', 'scheduled__2024-10-03T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/user_behaviour.py', '--cfg-path', '/tmp/tmps69_1d6b']
+[2024-10-11T15:00:36.228+0000] {standard_task_runner.py:91} INFO - Job 6: Subtask extract_user_purchase_data
+[2024-10-11T15:00:36.274+0000] {task_command.py:426} INFO - Running <TaskInstance: user_behaviour.extract_user_purchase_data scheduled__2024-10-03T00:00:00+00:00 [running]> on host 40ee99ca9dd7
+[2024-10-11T15:00:36.365+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_behaviour' AIRFLOW_CTX_TASK_ID='extract_user_purchase_data' AIRFLOW_CTX_EXECUTION_DATE='2024-10-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-03T00:00:00+00:00'
+[2024-10-11T15:00:36.366+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-11T15:00:36.378+0000] {sql.py:276} INFO - Executing: COPY (
+       select invoice_number,
+              stock_code,
+              detail,
+              quantity,
+              invoice_date,
+              unit_price,
+              customer_id,
+              country
+       from retail.user_purchase -- we should have a date filter here to pull only required data
+) TO '/temp/user_purchase.csv' WITH (FORMAT CSV, HEADER);
+[2024-10-11T15:00:36.379+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2024-10-11T15:00:36.379+0000] {base.py:84} INFO - Using connection ID 'postgres_default' for task execution.
+[2024-10-11T15:00:36.381+0000] {base.py:84} INFO - Using connection ID 'postgres_default' for task execution.
+[2024-10-11T15:00:36.385+0000] {sql.py:487} INFO - Running statement: COPY (
+       select invoice_number,
+              stock_code,
+              detail,
+              quantity,
+              invoice_date,
+              unit_price,
+              customer_id,
+              country
+       from retail.user_purchase -- we should have a date filter here to pull only required data
+) TO '/temp/user_purchase.csv' WITH (FORMAT CSV, HEADER);, parameters: None
+[2024-10-11T15:00:37.061+0000] {sql.py:496} INFO - Rows affected: 541908
+[2024-10-11T15:00:37.062+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-11T15:00:37.070+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_behaviour, task_id=extract_user_purchase_data, run_id=scheduled__2024-10-03T00:00:00+00:00, execution_date=20241003T000000, start_date=20241011T150036, end_date=20241011T150037
+[2024-10-11T15:00:37.131+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-10-11T15:00:37.147+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py:1297: AirflowProviderDeprecationWarning: Call to deprecated class PostgresOperator. (Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`.Also, you can provide `hook_params={'schema': <database>}`.)
+  result = cls.__new__(cls)
+
+[2024-10-11T15:00:37.163+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-11T15:00:37.165+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-10-11T15:06:54.334+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-11T15:06:54.364+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_behaviour.extract_user_purchase_data scheduled__2024-10-03T00:00:00+00:00 [queued]>
+[2024-10-11T15:06:54.376+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_behaviour.extract_user_purchase_data scheduled__2024-10-03T00:00:00+00:00 [queued]>
+[2024-10-11T15:06:54.376+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2024-10-11T15:06:54.391+0000] {taskinstance.py:2330} INFO - Executing <Task(PostgresOperator): extract_user_purchase_data> on 2024-10-03 00:00:00+00:00
+[2024-10-11T15:06:54.397+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=399) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-11T15:06:54.398+0000] {standard_task_runner.py:63} INFO - Started process 401 to run task
+[2024-10-11T15:06:54.399+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_behaviour', 'extract_user_purchase_data', 'scheduled__2024-10-03T00:00:00+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/user_behaviour.py', '--cfg-path', '/tmp/tmp0g4h57o0']
+[2024-10-11T15:06:54.401+0000] {standard_task_runner.py:91} INFO - Job 22: Subtask extract_user_purchase_data
+[2024-10-11T15:06:54.451+0000] {task_command.py:426} INFO - Running <TaskInstance: user_behaviour.extract_user_purchase_data scheduled__2024-10-03T00:00:00+00:00 [running]> on host 40ee99ca9dd7
+[2024-10-11T15:06:54.551+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_behaviour' AIRFLOW_CTX_TASK_ID='extract_user_purchase_data' AIRFLOW_CTX_EXECUTION_DATE='2024-10-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-03T00:00:00+00:00'
+[2024-10-11T15:06:54.552+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-11T15:06:54.564+0000] {sql.py:276} INFO - Executing: COPY (
+       select invoice_number,
+              stock_code,
+              detail,
+              quantity,
+              invoice_date,
+              unit_price,
+              customer_id,
+              country
+       from retail.user_purchase -- we should have a date filter here to pull only required data
+) TO '/temp/user_purchase.csv' WITH (FORMAT CSV, HEADER);
+[2024-10-11T15:06:54.565+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2024-10-11T15:06:54.566+0000] {base.py:84} INFO - Using connection ID 'postgres_default' for task execution.
+[2024-10-11T15:06:54.569+0000] {base.py:84} INFO - Using connection ID 'postgres_default' for task execution.
+[2024-10-11T15:06:54.572+0000] {sql.py:487} INFO - Running statement: COPY (
+       select invoice_number,
+              stock_code,
+              detail,
+              quantity,
+              invoice_date,
+              unit_price,
+              customer_id,
+              country
+       from retail.user_purchase -- we should have a date filter here to pull only required data
+) TO '/temp/user_purchase.csv' WITH (FORMAT CSV, HEADER);, parameters: None
+[2024-10-11T15:06:55.275+0000] {sql.py:496} INFO - Rows affected: 541908
+[2024-10-11T15:06:55.276+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-11T15:06:55.286+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_behaviour, task_id=extract_user_purchase_data, run_id=scheduled__2024-10-03T00:00:00+00:00, execution_date=20241003T000000, start_date=20241011T150654, end_date=20241011T150655
+[2024-10-11T15:06:55.348+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-10-11T15:06:55.360+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py:1297: AirflowProviderDeprecationWarning: Call to deprecated class SnowflakeOperator. (This class is deprecated. Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`. Also, you can provide `hook_params={'warehouse': <warehouse>, 'database': <database>, 'role': <role>, 'schema': <schema>, 'authenticator': <authenticator>,'session_parameters': <session_parameters>}`.)
+  result = cls.__new__(cls)
+
+[2024-10-11T15:06:55.361+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py:1297: AirflowProviderDeprecationWarning: Call to deprecated class PostgresOperator. (Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`.Also, you can provide `hook_params={'schema': <database>}`.)
+  result = cls.__new__(cls)
+
+[2024-10-11T15:06:55.382+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-11T15:06:55.385+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

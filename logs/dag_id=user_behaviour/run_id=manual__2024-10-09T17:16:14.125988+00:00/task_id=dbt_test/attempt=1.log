@@ -1,0 +1,49 @@
+[2024-10-09 17:20:20,665] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: user_behaviour.dbt_test manual__2024-10-09T17:16:14.125988+00:00 [queued]>
+[2024-10-09 17:20:20,676] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: user_behaviour.dbt_test manual__2024-10-09T17:16:14.125988+00:00 [queued]>
+[2024-10-09 17:20:20,676] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-09 17:20:20,676] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2024-10-09 17:20:20,677] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-09 17:20:20,692] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): dbt_test> on 2024-10-09 17:16:14.125988+00:00
+[2024-10-09 17:20:20,696] {standard_task_runner.py:52} INFO - Started process 987 to run task
+[2024-10-09 17:20:20,699] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'user_behaviour', 'dbt_test', 'manual__2024-10-09T17:16:14.125988+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/user_behaviour.py', '--cfg-path', '/tmp/tmpu4d7k8qy', '--error-file', '/tmp/tmptibcy9ds']
+[2024-10-09 17:20:20,700] {standard_task_runner.py:80} INFO - Job 13: Subtask dbt_test
+[2024-10-09 17:20:20,759] {task_command.py:370} INFO - Running <TaskInstance: user_behaviour.dbt_test manual__2024-10-09T17:16:14.125988+00:00 [running]> on host acfcc9bdc161
+[2024-10-09 17:20:20,841] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@***.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_behaviour
+AIRFLOW_CTX_TASK_ID=dbt_test
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-09T17:16:14.125988+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-09T17:16:14.125988+00:00
+[2024-10-09 17:20:20,842] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2024-10-09 17:20:20,843] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'dbt test --project-dir /opt/***/dbt/data_pipeline --profiles-dir /opt/***/dbt/data_pipeline/profiles/']
+[2024-10-09 17:20:20,853] {subprocess.py:85} INFO - Output:
+[2024-10-09 17:20:23,506] {subprocess.py:92} INFO - Running with dbt=1.0.0-b2
+[2024-10-09 17:20:24,992] {subprocess.py:92} INFO - [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2024-10-09 17:20:24,992] {subprocess.py:92} INFO - There are 1 unused configuration paths:
+[2024-10-09 17:20:24,992] {subprocess.py:92} INFO - - models.data_pipeline.marts
+[2024-10-09 17:20:24,992] {subprocess.py:92} INFO - 
+[2024-10-09 17:20:25,072] {subprocess.py:92} INFO - Found 2 models, 3 tests, 0 snapshots, 0 analyses, 172 macros, 0 operations, 0 seed files, 2 sources, 0 exposures
+[2024-10-09 17:20:25,074] {subprocess.py:92} INFO - 
+[2024-10-09 17:20:26,634] {subprocess.py:92} INFO - 17:20:26 | Concurrency: 10 threads (target='dev')
+[2024-10-09 17:20:26,634] {subprocess.py:92} INFO - 17:20:26 |
+[2024-10-09 17:20:26,642] {subprocess.py:92} INFO - 17:20:26 | 1 of 3 START test source_not_null_tpch_orders_o_orderkey............. [RUN]
+[2024-10-09 17:20:26,643] {subprocess.py:92} INFO - 17:20:26 | 2 of 3 START test source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_ [RUN]
+[2024-10-09 17:20:26,645] {subprocess.py:92} INFO - 17:20:26 | 3 of 3 START test source_unique_tpch_orders_o_orderkey............... [RUN]
+[2024-10-09 17:20:27,609] {subprocess.py:92} INFO - 17:20:27 | 1 of 3 PASS source_not_null_tpch_orders_o_orderkey................... [[32mPASS[0m in 0.97s]
+[2024-10-09 17:20:27,641] {subprocess.py:92} INFO - 17:20:27 | 2 of 3 PASS source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_ [[32mPASS[0m in 1.00s]
+[2024-10-09 17:20:27,653] {subprocess.py:92} INFO - 17:20:27 | 3 of 3 PASS source_unique_tpch_orders_o_orderkey..................... [[32mPASS[0m in 1.01s]
+[2024-10-09 17:20:27,750] {subprocess.py:92} INFO - 17:20:27 |
+[2024-10-09 17:20:27,750] {subprocess.py:92} INFO - 17:20:27 | Finished running 3 tests in 2.67s.
+[2024-10-09 17:20:27,757] {subprocess.py:92} INFO - 
+[2024-10-09 17:20:27,758] {subprocess.py:92} INFO - [32mCompleted successfully[0m
+[2024-10-09 17:20:27,758] {subprocess.py:92} INFO - 
+[2024-10-09 17:20:27,758] {subprocess.py:92} INFO - Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[2024-10-09 17:20:28,998] {subprocess.py:96} INFO - Command exited with return code 0
+[2024-10-09 17:20:29,034] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=user_behaviour, task_id=dbt_test, execution_date=20241009T171614, start_date=20241009T172020, end_date=20241009T172029
+[2024-10-09 17:20:29,084] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-10-09 17:20:29,126] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

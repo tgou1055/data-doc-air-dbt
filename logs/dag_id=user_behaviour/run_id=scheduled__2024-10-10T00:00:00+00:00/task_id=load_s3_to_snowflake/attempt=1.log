@@ -1,0 +1,138 @@
+[2024-10-11T14:01:57.599+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-11T14:01:57.615+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_behaviour.load_s3_to_snowflake scheduled__2024-10-10T00:00:00+00:00 [queued]>
+[2024-10-11T14:01:57.624+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_behaviour.load_s3_to_snowflake scheduled__2024-10-10T00:00:00+00:00 [queued]>
+[2024-10-11T14:01:57.624+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-11T14:01:57.638+0000] {taskinstance.py:2330} INFO - Executing <Task(SnowflakeOperator): load_s3_to_snowflake> on 2024-10-10 00:00:00+00:00
+[2024-10-11T14:01:57.643+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=563) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-11T14:01:57.645+0000] {standard_task_runner.py:63} INFO - Started process 565 to run task
+[2024-10-11T14:01:57.645+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_behaviour', 'load_s3_to_snowflake', 'scheduled__2024-10-10T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/user_behaviour.py', '--cfg-path', '/tmp/tmp2ij76_d0']
+[2024-10-11T14:01:57.647+0000] {standard_task_runner.py:91} INFO - Job 9: Subtask load_s3_to_snowflake
+[2024-10-11T14:01:57.694+0000] {task_command.py:426} INFO - Running <TaskInstance: user_behaviour.load_s3_to_snowflake scheduled__2024-10-10T00:00:00+00:00 [running]> on host 7326b1a9492c
+[2024-10-11T14:01:57.776+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_behaviour' AIRFLOW_CTX_TASK_ID='load_s3_to_snowflake' AIRFLOW_CTX_EXECUTION_DATE='2024-10-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-10T00:00:00+00:00'
+[2024-10-11T14:01:57.777+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-11T14:01:57.790+0000] {sql.py:276} INFO - Executing:  
+        COPY INTO DBT_DB.DBT_SCHEMA_RAW_LAYER.customers 
+        FROM '@DBT_DB.DBT_SCHEMA_RAW_LAYER.staging_csv_files/customers.csv'
+        FILE_FORMAT = (TYPE = 'CSV' FIELD_OPTIONALLY_ENCLOSED_BY = '"' SKIP_HEADER = 1) 
+        PATTERN = '.*.csv';
+        
+[2024-10-11T14:01:57.791+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2024-10-11T14:01:57.792+0000] {base.py:84} INFO - Using connection ID 'snowflake_conn' for task execution.
+[2024-10-11T14:01:57.795+0000] {base.py:84} INFO - Using connection ID 'snowflake_conn' for task execution.
+[2024-10-11T14:01:57.795+0000] {connection.py:399} INFO - Snowflake Connector for Python Version: 3.10.1, Python Version: 3.12.4, Platform: Linux-5.15.153.1-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[2024-10-11T14:01:57.796+0000] {connection.py:1239} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-10-11T14:01:59.454+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-11T14:01:59.454+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/operators/sql.py", line 282, in execute
+    output = hook.run(
+             ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/snowflake/hooks/snowflake.py", line 392, in run
+    with closing(self.get_conn()) as conn:
+                 ^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/snowflake/hooks/snowflake.py", line 290, in get_conn
+    conn = connector.connect(**conn_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/__init__.py", line 55, in Connect
+    return SnowflakeConnection(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/connection.py", line 442, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/connection.py", line 745, in connect
+    self.__open_connection()
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/connection.py", line 1073, in __open_connection
+    self.authenticate_with_retry(self.auth_class)
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/connection.py", line 1345, in authenticate_with_retry
+    self._authenticate(auth_instance)
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/connection.py", line 1373, in _authenticate
+    auth.authenticate(
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/auth/_auth.py", line 250, in authenticate
+    ret = self._rest._post_request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/network.py", line 734, in _post_request
+    ret = self.fetch(
+          ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/network.py", line 843, in fetch
+    ret = self._request_exec_wrapper(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/network.py", line 979, in _request_exec_wrapper
+    raise e
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/network.py", line 884, in _request_exec_wrapper
+    return_object = self._request_exec(
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/network.py", line 1193, in _request_exec
+    raise err
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/network.py", line 1135, in _request_exec
+    raise_failed_request_error(
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/network.py", line 238, in raise_failed_request_error
+    Error.errorhandler_wrapper(
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/errors.py", line 290, in errorhandler_wrapper
+    handed_over = Error.hand_to_other_handler(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/errors.py", line 348, in hand_to_other_handler
+    connection.errorhandler(connection, cursor, error_class, error_value)
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/errors.py", line 221, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.InterfaceError: 250003 (08001): None: 404 Not Found: post https://jr51262.eu-central-1.snowflakecomputing.com:443/session/v1/login-request?request_id=59390989-d556-433d-adb1-4782925fe327&databaseName=dbt_db&schemaName=dbt_schema_raw_layer&warehouse=dbt_wh&roleName=dbt_role&request_guid=19575a7d-61b1-4dd5-bf86-94cb51b16c65
+[2024-10-11T14:01:59.465+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=user_behaviour, task_id=load_s3_to_snowflake, run_id=scheduled__2024-10-10T00:00:00+00:00, execution_date=20241010T000000, start_date=20241011T140157, end_date=20241011T140159
+[2024-10-11T14:01:59.478+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 9 for task load_s3_to_snowflake (250003 (08001): None: 404 Not Found: post https://jr51262.eu-central-1.snowflakecomputing.com:443/session/v1/login-request?request_id=59390989-d556-433d-adb1-4782925fe327&databaseName=dbt_db&schemaName=dbt_schema_raw_layer&warehouse=dbt_wh&roleName=dbt_role&request_guid=19575a7d-61b1-4dd5-bf86-94cb51b16c65; 565)
+[2024-10-11T14:01:59.495+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-10-11T14:01:59.505+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py:1297: AirflowProviderDeprecationWarning: Call to deprecated class SnowflakeOperator. (This class is deprecated. Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`. Also, you can provide `hook_params={'warehouse': <warehouse>, 'database': <database>, 'role': <role>, 'schema': <schema>, 'authenticator': <authenticator>,'session_parameters': <session_parameters>}`.)
+  result = cls.__new__(cls)
+
+[2024-10-11T14:01:59.525+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-11T14:01:59.530+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-10-11T15:08:01.989+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-11T15:08:02.010+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_behaviour.load_s3_to_snowflake scheduled__2024-10-10T00:00:00+00:00 [queued]>
+[2024-10-11T15:08:02.019+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_behaviour.load_s3_to_snowflake scheduled__2024-10-10T00:00:00+00:00 [queued]>
+[2024-10-11T15:08:02.019+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2024-10-11T15:08:02.033+0000] {taskinstance.py:2330} INFO - Executing <Task(SnowflakeOperator): load_s3_to_snowflake> on 2024-10-10 00:00:00+00:00
+[2024-10-11T15:08:02.040+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=468) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-11T15:08:02.042+0000] {standard_task_runner.py:63} INFO - Started process 470 to run task
+[2024-10-11T15:08:02.042+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_behaviour', 'load_s3_to_snowflake', 'scheduled__2024-10-10T00:00:00+00:00', '--job-id', '31', '--raw', '--subdir', 'DAGS_FOLDER/user_behaviour.py', '--cfg-path', '/tmp/tmpl_didw6c']
+[2024-10-11T15:08:02.044+0000] {standard_task_runner.py:91} INFO - Job 31: Subtask load_s3_to_snowflake
+[2024-10-11T15:08:02.088+0000] {task_command.py:426} INFO - Running <TaskInstance: user_behaviour.load_s3_to_snowflake scheduled__2024-10-10T00:00:00+00:00 [running]> on host 40ee99ca9dd7
+[2024-10-11T15:08:02.171+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@***.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_behaviour' AIRFLOW_CTX_TASK_ID='load_s3_to_snowflake' AIRFLOW_CTX_EXECUTION_DATE='2024-10-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-10T00:00:00+00:00'
+[2024-10-11T15:08:02.172+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-11T15:08:02.184+0000] {sql.py:276} INFO - Executing:  
+        COPY INTO DBT_DB.DBT_SCHEMA_RAW_LAYER.customers 
+        FROM '@DBT_DB.DBT_SCHEMA_RAW_LAYER.staging_csv_files/customers/customers.csv'
+        FILE_FORMAT = (TYPE = 'CSV' FIELD_OPTIONALLY_ENCLOSED_BY = '"' SKIP_HEADER = 1);
+        
+[2024-10-11T15:08:02.185+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2024-10-11T15:08:02.186+0000] {base.py:84} INFO - Using connection ID 'snowflake_conn' for task execution.
+[2024-10-11T15:08:02.189+0000] {base.py:84} INFO - Using connection ID 'snowflake_conn' for task execution.
+[2024-10-11T15:08:02.189+0000] {connection.py:399} INFO - Snowflake Connector for Python Version: 3.10.1, Python Version: 3.12.4, Platform: Linux-5.15.153.1-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[2024-10-11T15:08:02.190+0000] {connection.py:1239} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-10-11T15:08:02.922+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-10-11T15:08:02.922+0000] {sql.py:487} INFO - Running statement: COPY INTO DBT_DB.DBT_SCHEMA_RAW_LAYER.customers 
+        FROM '@DBT_DB.DBT_SCHEMA_RAW_LAYER.staging_csv_files/customers/customers.csv'
+        FILE_FORMAT = (TYPE = 'CSV' FIELD_OPTIONALLY_ENCLOSED_BY = '"' SKIP_HEADER = 1);, parameters: None
+[2024-10-11T15:08:03.369+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-10-11T15:08:03.369+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-10-11T15:08:03.370+0000] {snowflake.py:410} INFO - Rows affected: 1
+[2024-10-11T15:08:03.370+0000] {snowflake.py:411} INFO - Snowflake query id: 01b79eec-3203-2478-0001-f7b60005bcce
+[2024-10-11T15:08:03.514+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-10-11T15:08:03.514+0000] {connection.py:762} INFO - closed
+[2024-10-11T15:08:03.541+0000] {connection.py:768} INFO - No async queries seem to be running, deleting session
+[2024-10-11T15:08:03.573+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-11T15:08:03.605+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_behaviour, task_id=load_s3_to_snowflake, run_id=scheduled__2024-10-10T00:00:00+00:00, execution_date=20241010T000000, start_date=20241011T150802, end_date=20241011T150803
+[2024-10-11T15:08:03.627+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-10-11T15:08:03.637+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py:1297: AirflowProviderDeprecationWarning: Call to deprecated class SnowflakeOperator. (This class is deprecated. Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`. Also, you can provide `hook_params={'warehouse': <warehouse>, 'database': <database>, 'role': <role>, 'schema': <schema>, 'authenticator': <authenticator>,'session_parameters': <session_parameters>}`.)
+  result = cls.__new__(cls)
+
+[2024-10-11T15:08:03.646+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-11T15:08:03.649+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

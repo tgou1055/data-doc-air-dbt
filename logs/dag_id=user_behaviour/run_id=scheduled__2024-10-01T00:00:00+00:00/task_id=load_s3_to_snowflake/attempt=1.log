@@ -1,0 +1,43 @@
+[2024-10-11T15:06:25.552+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-11T15:06:25.576+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: user_behaviour.load_s3_to_snowflake scheduled__2024-10-01T00:00:00+00:00 [queued]>
+[2024-10-11T15:06:25.586+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: user_behaviour.load_s3_to_snowflake scheduled__2024-10-01T00:00:00+00:00 [queued]>
+[2024-10-11T15:06:25.586+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2024-10-11T15:06:25.600+0000] {taskinstance.py:2330} INFO - Executing <Task(SnowflakeOperator): load_s3_to_snowflake> on 2024-10-01 00:00:00+00:00
+[2024-10-11T15:06:25.607+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=370) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-11T15:06:25.609+0000] {standard_task_runner.py:63} INFO - Started process 372 to run task
+[2024-10-11T15:06:25.609+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'user_behaviour', 'load_s3_to_snowflake', 'scheduled__2024-10-01T00:00:00+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/user_behaviour.py', '--cfg-path', '/tmp/tmp8hrnsevb']
+[2024-10-11T15:06:25.612+0000] {standard_task_runner.py:91} INFO - Job 17: Subtask load_s3_to_snowflake
+[2024-10-11T15:06:25.658+0000] {task_command.py:426} INFO - Running <TaskInstance: user_behaviour.load_s3_to_snowflake scheduled__2024-10-01T00:00:00+00:00 [running]> on host 40ee99ca9dd7
+[2024-10-11T15:06:25.752+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='user_behaviour' AIRFLOW_CTX_TASK_ID='load_s3_to_snowflake' AIRFLOW_CTX_EXECUTION_DATE='2024-10-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-01T00:00:00+00:00'
+[2024-10-11T15:06:25.753+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-11T15:06:25.765+0000] {sql.py:276} INFO - Executing:  
+        COPY INTO DBT_DB.DBT_SCHEMA_RAW_LAYER.customers 
+        FROM '@DBT_DB.DBT_SCHEMA_RAW_LAYER.staging_csv_files/customers/customers.csv'
+        FILE_FORMAT = (TYPE = 'CSV' FIELD_OPTIONALLY_ENCLOSED_BY = '"' SKIP_HEADER = 1);
+        
+[2024-10-11T15:06:25.766+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2024-10-11T15:06:25.767+0000] {base.py:84} INFO - Using connection ID 'snowflake_conn' for task execution.
+[2024-10-11T15:06:25.770+0000] {base.py:84} INFO - Using connection ID 'snowflake_conn' for task execution.
+[2024-10-11T15:06:25.770+0000] {connection.py:399} INFO - Snowflake Connector for Python Version: 3.10.1, Python Version: 3.12.4, Platform: Linux-5.15.153.1-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[2024-10-11T15:06:25.771+0000] {connection.py:1239} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2024-10-11T15:06:27.084+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-10-11T15:06:27.084+0000] {sql.py:487} INFO - Running statement: COPY INTO DBT_DB.DBT_SCHEMA_RAW_LAYER.customers 
+        FROM '@DBT_DB.DBT_SCHEMA_RAW_LAYER.staging_csv_files/customers/customers.csv'
+        FILE_FORMAT = (TYPE = 'CSV' FIELD_OPTIONALLY_ENCLOSED_BY = '"' SKIP_HEADER = 1);, parameters: None
+[2024-10-11T15:06:27.994+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-10-11T15:06:27.995+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-10-11T15:06:27.996+0000] {snowflake.py:410} INFO - Rows affected: 1
+[2024-10-11T15:06:27.996+0000] {snowflake.py:411} INFO - Snowflake query id: 01b79eea-3203-2863-0001-f7b600066092
+[2024-10-11T15:06:28.299+0000] {cursor.py:1149} INFO - Number of results in first chunk: 1
+[2024-10-11T15:06:28.299+0000] {connection.py:762} INFO - closed
+[2024-10-11T15:06:28.331+0000] {connection.py:768} INFO - No async queries seem to be running, deleting session
+[2024-10-11T15:06:28.370+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-11T15:06:28.414+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=user_behaviour, task_id=load_s3_to_snowflake, run_id=scheduled__2024-10-01T00:00:00+00:00, execution_date=20241001T000000, start_date=20241011T150625, end_date=20241011T150628
+[2024-10-11T15:06:28.440+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-10-11T15:06:28.449+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py:1297: AirflowProviderDeprecationWarning: Call to deprecated class SnowflakeOperator. (This class is deprecated. Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`. Also, you can provide `hook_params={'warehouse': <warehouse>, 'database': <database>, 'role': <role>, 'schema': <schema>, 'authenticator': <authenticator>,'session_parameters': <session_parameters>}`.)
+  result = cls.__new__(cls)
+
+[2024-10-11T15:06:28.458+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-11T15:06:28.461+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

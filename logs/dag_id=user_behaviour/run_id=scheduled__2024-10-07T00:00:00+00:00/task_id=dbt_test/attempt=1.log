@@ -1,0 +1,133 @@
+[2024-10-08 17:49:19,018] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: user_behaviour.dbt_test scheduled__2024-10-07T00:00:00+00:00 [queued]>
+[2024-10-08 17:49:19,030] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: user_behaviour.dbt_test scheduled__2024-10-07T00:00:00+00:00 [queued]>
+[2024-10-08 17:49:19,030] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-08 17:49:19,030] {taskinstance.py:1357} INFO - Starting attempt 1 of 3
+[2024-10-08 17:49:19,030] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-08 17:49:19,047] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): dbt_test> on 2024-10-07 00:00:00+00:00
+[2024-10-08 17:49:19,052] {standard_task_runner.py:52} INFO - Started process 223 to run task
+[2024-10-08 17:49:19,056] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'user_behaviour', 'dbt_test', 'scheduled__2024-10-07T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/user_behaviour.py', '--cfg-path', '/tmp/tmpw0oldlo8', '--error-file', '/tmp/tmpyozksxq_']
+[2024-10-08 17:49:19,058] {standard_task_runner.py:80} INFO - Job 3: Subtask dbt_test
+[2024-10-08 17:49:19,075] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:525 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-08 17:49:19,115] {task_command.py:370} INFO - Running <TaskInstance: user_behaviour.dbt_test scheduled__2024-10-07T00:00:00+00:00 [running]> on host ffd6c1980b1c
+[2024-10-08 17:49:19,192] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@***.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_behaviour
+AIRFLOW_CTX_TASK_ID=dbt_test
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-10-07T00:00:00+00:00
+[2024-10-08 17:49:19,193] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2024-10-08 17:49:19,194] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /opt/***/dbt/data_pipeline && dbt test']
+[2024-10-08 17:49:19,202] {subprocess.py:85} INFO - Output:
+[2024-10-08 17:49:21,865] {subprocess.py:92} INFO - Running with dbt=1.0.0-b2
+[2024-10-08 17:49:21,867] {subprocess.py:92} INFO - Encountered an error while reading the project:
+[2024-10-08 17:49:21,868] {subprocess.py:92} INFO -   ERROR: Runtime Error
+[2024-10-08 17:49:21,868] {subprocess.py:92} INFO -   Could not find profile named 'data_pipeline'
+[2024-10-08 17:49:21,876] {subprocess.py:92} INFO - Encountered an error:
+[2024-10-08 17:49:21,876] {subprocess.py:92} INFO - Runtime Error
+[2024-10-08 17:49:21,876] {subprocess.py:92} INFO -   Could not run dbt
+[2024-10-08 17:49:21,986] {subprocess.py:96} INFO - Command exited with return code 2
+[2024-10-08 17:49:22,001] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2024-10-08 17:49:22,004] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=user_behaviour, task_id=dbt_test, execution_date=20241007T000000, start_date=20241008T174919, end_date=20241008T174922
+[2024-10-08 17:49:22,018] {standard_task_runner.py:97} ERROR - Failed to execute job 3 for task dbt_test (Bash command failed. The command returned a non-zero exit code 2.; 223)
+[2024-10-08 17:49:22,037] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-10-08 17:49:22,082] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-08 17:54:13,463] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: user_behaviour.dbt_test scheduled__2024-10-07T00:00:00+00:00 [queued]>
+[2024-10-08 17:54:13,474] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: user_behaviour.dbt_test scheduled__2024-10-07T00:00:00+00:00 [queued]>
+[2024-10-08 17:54:13,474] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-08 17:54:13,474] {taskinstance.py:1357} INFO - Starting attempt 1 of 3
+[2024-10-08 17:54:13,474] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-08 17:54:13,490] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): dbt_test> on 2024-10-07 00:00:00+00:00
+[2024-10-08 17:54:13,494] {standard_task_runner.py:52} INFO - Started process 320 to run task
+[2024-10-08 17:54:13,497] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'user_behaviour', 'dbt_test', 'scheduled__2024-10-07T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/user_behaviour.py', '--cfg-path', '/tmp/tmpwit8gzvy', '--error-file', '/tmp/tmpjrl7g73w']
+[2024-10-08 17:54:13,498] {standard_task_runner.py:80} INFO - Job 3: Subtask dbt_test
+[2024-10-08 17:54:13,514] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:525 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-08 17:54:13,552] {task_command.py:370} INFO - Running <TaskInstance: user_behaviour.dbt_test scheduled__2024-10-07T00:00:00+00:00 [running]> on host e289ee31b3ca
+[2024-10-08 17:54:13,629] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@***.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_behaviour
+AIRFLOW_CTX_TASK_ID=dbt_test
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-10-07T00:00:00+00:00
+[2024-10-08 17:54:13,630] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2024-10-08 17:54:13,632] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /opt/***/dbt/data_pipeline && dbt test']
+[2024-10-08 17:54:13,640] {subprocess.py:85} INFO - Output:
+[2024-10-08 17:54:16,125] {subprocess.py:92} INFO - Running with dbt=1.0.0-b2
+[2024-10-08 17:54:16,128] {subprocess.py:92} INFO - Encountered an error while reading the project:
+[2024-10-08 17:54:16,128] {subprocess.py:92} INFO -   ERROR: Runtime Error
+[2024-10-08 17:54:16,128] {subprocess.py:92} INFO -   Could not find profile named 'data_pipeline'
+[2024-10-08 17:54:16,135] {subprocess.py:92} INFO - Encountered an error:
+[2024-10-08 17:54:16,135] {subprocess.py:92} INFO - Runtime Error
+[2024-10-08 17:54:16,135] {subprocess.py:92} INFO -   Could not run dbt
+[2024-10-08 17:54:16,247] {subprocess.py:96} INFO - Command exited with return code 2
+[2024-10-08 17:54:16,263] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2024-10-08 17:54:16,267] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=user_behaviour, task_id=dbt_test, execution_date=20241007T000000, start_date=20241008T175413, end_date=20241008T175416
+[2024-10-08 17:54:16,282] {standard_task_runner.py:97} ERROR - Failed to execute job 3 for task dbt_test (Bash command failed. The command returned a non-zero exit code 2.; 320)
+[2024-10-08 17:54:16,318] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-10-08 17:54:16,365] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-09 05:50:06,658] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: user_behaviour.dbt_test scheduled__2024-10-07T00:00:00+00:00 [queued]>
+[2024-10-09 05:50:06,670] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: user_behaviour.dbt_test scheduled__2024-10-07T00:00:00+00:00 [queued]>
+[2024-10-09 05:50:06,670] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-09 05:50:06,670] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2024-10-09 05:50:06,670] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-09 05:50:06,686] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): dbt_test> on 2024-10-07 00:00:00+00:00
+[2024-10-09 05:50:06,689] {standard_task_runner.py:52} INFO - Started process 222 to run task
+[2024-10-09 05:50:06,692] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'user_behaviour', 'dbt_test', 'scheduled__2024-10-07T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/user_behaviour.py', '--cfg-path', '/tmp/tmpdrvfcv8r', '--error-file', '/tmp/tmpmamwln0u']
+[2024-10-09 05:50:06,693] {standard_task_runner.py:80} INFO - Job 7: Subtask dbt_test
+[2024-10-09 05:50:06,745] {task_command.py:370} INFO - Running <TaskInstance: user_behaviour.dbt_test scheduled__2024-10-07T00:00:00+00:00 [running]> on host 82b931b01445
+[2024-10-09 05:50:06,815] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@***.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_behaviour
+AIRFLOW_CTX_TASK_ID=dbt_test
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-10-07T00:00:00+00:00
+[2024-10-09 05:50:06,815] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2024-10-09 05:50:06,816] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'dbt test --project-dir /opt/***/dbt/data_pipeline --profiles-dir /opt/***/dbt/data_pipeline/profiles/']
+[2024-10-09 05:50:06,826] {subprocess.py:85} INFO - Output:
+[2024-10-09 05:50:09,170] {subprocess.py:92} INFO - Running with dbt=1.0.0-b2
+[2024-10-09 05:50:10,568] {subprocess.py:92} INFO - [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2024-10-09 05:50:10,568] {subprocess.py:92} INFO - There are 1 unused configuration paths:
+[2024-10-09 05:50:10,568] {subprocess.py:92} INFO - - models.data_pipeline.marts
+[2024-10-09 05:50:10,568] {subprocess.py:92} INFO - 
+[2024-10-09 05:50:10,642] {subprocess.py:92} INFO - Found 2 models, 3 tests, 0 snapshots, 0 analyses, 172 macros, 0 operations, 0 seed files, 2 sources, 0 exposures
+[2024-10-09 05:50:10,644] {subprocess.py:92} INFO - 
+[2024-10-09 05:50:11,576] {subprocess.py:92} INFO - 05:50:11 | Concurrency: 10 threads (target='dev')
+[2024-10-09 05:50:11,576] {subprocess.py:92} INFO - 05:50:11 |
+[2024-10-09 05:50:11,584] {subprocess.py:92} INFO - 05:50:11 | 1 of 3 START test source_not_null_tpch_orders_o_orderkey............. [RUN]
+[2024-10-09 05:50:11,585] {subprocess.py:92} INFO - 05:50:11 | 2 of 3 START test source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_ [RUN]
+[2024-10-09 05:50:11,586] {subprocess.py:92} INFO - 05:50:11 | 3 of 3 START test source_unique_tpch_orders_o_orderkey............... [RUN]
+[2024-10-09 05:50:13,287] {subprocess.py:92} INFO - 05:50:13 | 1 of 3 PASS source_not_null_tpch_orders_o_orderkey................... [[32mPASS[0m in 1.70s]
+[2024-10-09 05:50:13,434] {subprocess.py:92} INFO - 05:50:13 | 3 of 3 PASS source_unique_tpch_orders_o_orderkey..................... [[32mPASS[0m in 1.85s]
+[2024-10-09 05:50:13,545] {subprocess.py:92} INFO - 05:50:13 | 2 of 3 PASS source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_ [[32mPASS[0m in 1.96s]
+[2024-10-09 05:50:13,649] {subprocess.py:92} INFO - 05:50:13 |
+[2024-10-09 05:50:13,649] {subprocess.py:92} INFO - 05:50:13 | Finished running 3 tests in 3.00s.
+[2024-10-09 05:50:13,657] {subprocess.py:92} INFO - 
+[2024-10-09 05:50:13,658] {subprocess.py:92} INFO - [32mCompleted successfully[0m
+[2024-10-09 05:50:13,658] {subprocess.py:92} INFO - 
+[2024-10-09 05:50:13,658] {subprocess.py:92} INFO - Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[2024-10-09 05:50:14,783] {subprocess.py:96} INFO - Command exited with return code 0
+[2024-10-09 05:50:14,814] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=user_behaviour, task_id=dbt_test, execution_date=20241007T000000, start_date=20241009T055006, end_date=20241009T055014
+[2024-10-09 05:50:14,839] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-10-09 05:50:14,878] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

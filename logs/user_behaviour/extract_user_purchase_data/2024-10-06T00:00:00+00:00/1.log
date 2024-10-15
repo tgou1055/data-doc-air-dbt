@@ -1,0 +1,108 @@
+[2024-10-07 10:56:07,993] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: user_behaviour.extract_user_purchase_data manual__2024-10-07T10:56:06.554038+00:00 [queued]>
+[2024-10-07 10:56:08,011] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: user_behaviour.extract_user_purchase_data manual__2024-10-07T10:56:06.554038+00:00 [queued]>
+[2024-10-07 10:56:08,011] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07 10:56:08,011] {taskinstance.py:1242} INFO - Starting attempt 1 of 3
+[2024-10-07 10:56:08,011] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07 10:56:08,023] {taskinstance.py:1262} INFO - Executing <Task(PostgresOperator): extract_user_purchase_data> on 2024-10-07 10:56:06.554038+00:00
+[2024-10-07 10:56:08,026] {standard_task_runner.py:52} INFO - Started process 241 to run task
+[2024-10-07 10:56:08,029] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'user_behaviour', 'extract_user_purchase_data', 'manual__2024-10-07T10:56:06.554038+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/user_behaviour.py', '--cfg-path', '/tmp/tmpl3ignyfg', '--error-file', '/tmp/tmpp5balnz8']
+[2024-10-07 10:56:08,032] {standard_task_runner.py:77} INFO - Job 2: Subtask extract_user_purchase_data
+[2024-10-07 10:56:08,070] {logging_mixin.py:109} INFO - Running <TaskInstance: user_behaviour.extract_user_purchase_data manual__2024-10-07T10:56:06.554038+00:00 [running]> on host 26a5fdd8a95f
+[2024-10-07 10:56:08,117] {taskinstance.py:1414} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@***.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_behaviour
+AIRFLOW_CTX_TASK_ID=extract_user_purchase_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T10:56:06.554038+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-07T10:56:06.554038+00:00
+[2024-10-07 10:56:08,118] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2024-10-07 10:56:08,118] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2024-10-07 10:56:08,122] {dbapi.py:225} INFO - Running statement: COPY (
+       select invoice_number,
+              stock_code,
+              detail,
+              quantity,
+              invoice_date,
+              unit_price,
+              customer_id,
+              country
+       from retail.user_purchase -- we should have a date filter here to pull only required data
+) TO '/temp/user_purchase.csv' WITH (FORMAT CSV, HEADER);, parameters: None
+[2024-10-07 10:56:08,747] {dbapi.py:233} INFO - Rows affected: 541908
+[2024-10-07 10:56:08,757] {taskinstance.py:1280} INFO - Marking task as SUCCESS. dag_id=user_behaviour, task_id=extract_user_purchase_data, execution_date=20241007T105606, start_date=20241007T105607, end_date=20241007T105608
+[2024-10-07 10:56:08,803] {local_task_job.py:154} INFO - Task exited with return code 0
+[2024-10-07 10:56:08,838] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-07 11:03:58,705] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: user_behaviour.extract_user_purchase_data manual__2024-10-07T11:03:57.354928+00:00 [queued]>
+[2024-10-07 11:03:58,728] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: user_behaviour.extract_user_purchase_data manual__2024-10-07T11:03:57.354928+00:00 [queued]>
+[2024-10-07 11:03:58,728] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07 11:03:58,728] {taskinstance.py:1242} INFO - Starting attempt 1 of 3
+[2024-10-07 11:03:58,729] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07 11:03:58,741] {taskinstance.py:1262} INFO - Executing <Task(PostgresOperator): extract_user_purchase_data> on 2024-10-07 11:03:57.354928+00:00
+[2024-10-07 11:03:58,745] {standard_task_runner.py:52} INFO - Started process 700 to run task
+[2024-10-07 11:03:58,748] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'user_behaviour', 'extract_user_purchase_data', 'manual__2024-10-07T11:03:57.354928+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/user_behaviour.py', '--cfg-path', '/tmp/tmpms6qb587', '--error-file', '/tmp/tmp7tf0hycz']
+[2024-10-07 11:03:58,751] {standard_task_runner.py:77} INFO - Job 3: Subtask extract_user_purchase_data
+[2024-10-07 11:03:58,792] {logging_mixin.py:109} INFO - Running <TaskInstance: user_behaviour.extract_user_purchase_data manual__2024-10-07T11:03:57.354928+00:00 [running]> on host 26a5fdd8a95f
+[2024-10-07 11:03:58,837] {taskinstance.py:1414} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@***.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_behaviour
+AIRFLOW_CTX_TASK_ID=extract_user_purchase_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T11:03:57.354928+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-07T11:03:57.354928+00:00
+[2024-10-07 11:03:58,837] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2024-10-07 11:03:58,838] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2024-10-07 11:03:58,841] {dbapi.py:225} INFO - Running statement: COPY (
+       select invoice_number,
+              stock_code,
+              detail,
+              quantity,
+              invoice_date,
+              unit_price,
+              customer_id,
+              country
+       from retail.user_purchase -- we should have a date filter here to pull only required data
+) TO '/temp/user_purchase.csv' WITH (FORMAT CSV, HEADER);, parameters: None
+[2024-10-07 11:03:59,556] {dbapi.py:233} INFO - Rows affected: 541908
+[2024-10-07 11:03:59,568] {taskinstance.py:1280} INFO - Marking task as SUCCESS. dag_id=user_behaviour, task_id=extract_user_purchase_data, execution_date=20241007T110357, start_date=20241007T110358, end_date=20241007T110359
+[2024-10-07 11:03:59,602] {local_task_job.py:154} INFO - Task exited with return code 0
+[2024-10-07 11:03:59,636] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-07 11:05:04,109] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: user_behaviour.extract_user_purchase_data manual__2024-10-07T11:05:02.858109+00:00 [queued]>
+[2024-10-07 11:05:04,127] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: user_behaviour.extract_user_purchase_data manual__2024-10-07T11:05:02.858109+00:00 [queued]>
+[2024-10-07 11:05:04,127] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07 11:05:04,127] {taskinstance.py:1242} INFO - Starting attempt 1 of 3
+[2024-10-07 11:05:04,127] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-07 11:05:04,138] {taskinstance.py:1262} INFO - Executing <Task(PostgresOperator): extract_user_purchase_data> on 2024-10-07 11:05:02.858109+00:00
+[2024-10-07 11:05:04,140] {standard_task_runner.py:52} INFO - Started process 766 to run task
+[2024-10-07 11:05:04,143] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'user_behaviour', 'extract_user_purchase_data', 'manual__2024-10-07T11:05:02.858109+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/user_behaviour.py', '--cfg-path', '/tmp/tmp1dks7ojm', '--error-file', '/tmp/tmpv0ll6rio']
+[2024-10-07 11:05:04,146] {standard_task_runner.py:77} INFO - Job 4: Subtask extract_user_purchase_data
+[2024-10-07 11:05:04,183] {logging_mixin.py:109} INFO - Running <TaskInstance: user_behaviour.extract_user_purchase_data manual__2024-10-07T11:05:02.858109+00:00 [running]> on host 26a5fdd8a95f
+[2024-10-07 11:05:04,230] {taskinstance.py:1414} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@***.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_behaviour
+AIRFLOW_CTX_TASK_ID=extract_user_purchase_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T11:05:02.858109+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-07T11:05:02.858109+00:00
+[2024-10-07 11:05:04,231] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2024-10-07 11:05:04,232] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2024-10-07 11:05:04,236] {dbapi.py:225} INFO - Running statement: COPY (
+       select invoice_number,
+              stock_code,
+              detail,
+              quantity,
+              invoice_date,
+              unit_price,
+              customer_id,
+              country
+       from retail.user_purchase -- we should have a date filter here to pull only required data
+) TO '/temp/user_purchase.csv' WITH (FORMAT CSV, HEADER);, parameters: None
+[2024-10-07 11:05:04,915] {dbapi.py:233} INFO - Rows affected: 541908
+[2024-10-07 11:05:04,924] {taskinstance.py:1280} INFO - Marking task as SUCCESS. dag_id=user_behaviour, task_id=extract_user_purchase_data, execution_date=20241007T110502, start_date=20241007T110504, end_date=20241007T110504
+[2024-10-07 11:05:04,958] {local_task_job.py:154} INFO - Task exited with return code 0
+[2024-10-07 11:05:04,990] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

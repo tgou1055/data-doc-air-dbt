@@ -1,0 +1,247 @@
+[2024-10-10T04:29:39.621+0000] {processor.py:161} INFO - Started process (PID=41) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:29:39.622+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:29:39.624+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:29:39.623+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:29:39.905+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:29:40.287+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:29:40.287+0000] {override.py:1829} INFO - Created Permission View: can edit on DAG:user_behaviour
+[2024-10-10T04:29:40.307+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:29:40.306+0000] {override.py:1829} INFO - Created Permission View: can delete on DAG:user_behaviour
+[2024-10-10T04:29:40.320+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:29:40.319+0000] {override.py:1829} INFO - Created Permission View: can read on DAG:user_behaviour
+[2024-10-10T04:29:40.321+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:29:40.321+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:29:40.341+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:29:40.341+0000] {dag.py:3118} INFO - Creating ORM DAG for user_behaviour
+[2024-10-10T04:29:40.361+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:29:40.361+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-09 00:00:00+00:00, run_after=2024-10-10 00:00:00+00:00
+[2024-10-10T04:29:40.596+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.997 seconds
+[2024-10-10T04:30:11.258+0000] {processor.py:161} INFO - Started process (PID=63) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:30:11.261+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:30:11.265+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:30:11.264+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:30:11.317+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:30:11.368+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:30:11.368+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:30:11.398+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:30:11.398+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-09 00:00:00+00:00, run_after=2024-10-10 00:00:00+00:00
+[2024-10-10T04:30:11.429+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.192 seconds
+[2024-10-10T04:30:41.819+0000] {processor.py:161} INFO - Started process (PID=78) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:30:41.820+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:30:41.822+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:30:41.822+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:30:41.859+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:30:41.891+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:30:41.890+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:30:41.938+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.133 seconds
+[2024-10-10T04:31:12.413+0000] {processor.py:161} INFO - Started process (PID=93) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:31:12.414+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:31:12.417+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:31:12.416+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:31:12.452+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:31:12.482+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:31:12.482+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:31:12.528+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.128 seconds
+[2024-10-10T04:31:43.120+0000] {processor.py:161} INFO - Started process (PID=115) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:31:43.121+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:31:43.124+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:31:43.123+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:31:43.160+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:31:43.188+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:31:43.188+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:31:43.214+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:31:43.214+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:31:43.238+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.131 seconds
+[2024-10-10T04:32:13.784+0000] {processor.py:161} INFO - Started process (PID=130) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:32:13.786+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:32:13.788+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:32:13.788+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:32:13.827+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:32:13.856+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:32:13.856+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:32:13.884+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:32:13.884+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:32:14.103+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.339 seconds
+[2024-10-10T04:32:44.440+0000] {processor.py:161} INFO - Started process (PID=146) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:32:44.443+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:32:44.445+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:32:44.445+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:32:44.480+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:32:44.508+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:32:44.507+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:32:44.674+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:32:44.674+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:32:44.694+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.266 seconds
+[2024-10-10T04:33:15.030+0000] {processor.py:161} INFO - Started process (PID=168) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:33:15.031+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:33:15.033+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:33:15.033+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:33:15.065+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:33:15.240+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:33:15.239+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:33:15.264+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:33:15.263+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:33:15.285+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.267 seconds
+[2024-10-10T04:33:46.112+0000] {processor.py:161} INFO - Started process (PID=183) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:33:46.115+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:33:46.116+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:33:46.116+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:33:46.148+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:33:46.311+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:33:46.311+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:33:46.330+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:33:46.330+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:33:46.347+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.246 seconds
+[2024-10-10T04:34:16.815+0000] {processor.py:161} INFO - Started process (PID=205) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:34:16.816+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:34:16.819+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:34:16.819+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:34:17.079+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:34:17.110+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:34:17.110+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:34:17.143+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:34:17.142+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:34:17.176+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.383 seconds
+[2024-10-10T04:34:47.737+0000] {processor.py:161} INFO - Started process (PID=221) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:34:47.739+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:34:47.741+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:34:47.740+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:34:47.921+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:34:47.944+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:34:47.944+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:34:47.965+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:34:47.965+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:34:47.993+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.267 seconds
+[2024-10-10T04:35:18.500+0000] {processor.py:161} INFO - Started process (PID=243) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:35:18.502+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:35:18.503+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:35:18.503+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:35:18.532+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:35:18.555+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:35:18.555+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:35:18.578+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:35:18.577+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:35:18.596+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.251 seconds
+[2024-10-10T04:35:49.339+0000] {processor.py:161} INFO - Started process (PID=258) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:35:49.349+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:35:49.351+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:35:49.350+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:35:49.381+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:35:49.409+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:35:49.409+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:35:49.436+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:35:49.436+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:35:49.456+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.128 seconds
+[2024-10-10T04:36:20.114+0000] {processor.py:161} INFO - Started process (PID=280) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:36:20.115+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:36:20.117+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:36:20.117+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:36:20.149+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:36:20.186+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:36:20.185+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:36:20.213+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:36:20.213+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:36:20.235+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.134 seconds
+[2024-10-10T04:36:50.801+0000] {processor.py:161} INFO - Started process (PID=295) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:36:50.802+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:36:50.804+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:36:50.804+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:36:50.835+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:36:50.861+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:36:50.861+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:36:50.884+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:36:50.884+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:36:50.903+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.114 seconds
+[2024-10-10T04:37:21.688+0000] {processor.py:161} INFO - Started process (PID=317) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:37:21.689+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:37:21.691+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:37:21.691+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:37:21.724+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:37:21.750+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:37:21.750+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:37:21.773+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:37:21.773+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:37:21.794+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.118 seconds
+[2024-10-10T04:37:52.374+0000] {processor.py:161} INFO - Started process (PID=332) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:37:52.384+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:37:52.385+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:37:52.385+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:37:52.415+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:37:52.440+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:37:52.440+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:37:52.463+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:37:52.463+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:37:52.482+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.120 seconds
+[2024-10-10T04:38:23.071+0000] {processor.py:161} INFO - Started process (PID=354) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:38:23.072+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:38:23.074+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:38:23.073+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:38:23.107+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:38:23.133+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:38:23.133+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:38:23.158+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:38:23.157+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:38:23.177+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.120 seconds
+[2024-10-10T04:38:53.680+0000] {processor.py:161} INFO - Started process (PID=369) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:38:53.690+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:38:53.691+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:38:53.691+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:38:53.721+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:38:53.748+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:38:53.748+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:38:53.771+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:38:53.771+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:38:53.792+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.124 seconds
+[2024-10-10T04:39:24.384+0000] {processor.py:161} INFO - Started process (PID=391) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:39:24.395+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:39:24.397+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:39:24.396+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:39:24.430+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:39:24.457+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:39:24.456+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:39:24.482+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:39:24.482+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:39:24.502+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.130 seconds
+[2024-10-10T04:39:55.004+0000] {processor.py:161} INFO - Started process (PID=406) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:39:55.015+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:39:55.017+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:39:55.017+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:39:55.048+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:39:55.074+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:39:55.074+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:39:55.095+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:39:55.095+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:39:55.114+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.121 seconds
+[2024-10-10T04:40:25.686+0000] {processor.py:161} INFO - Started process (PID=428) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:40:25.688+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:40:25.689+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:40:25.689+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:40:25.719+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:40:25.745+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:40:25.745+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:40:25.769+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:40:25.769+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:40:25.790+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.115 seconds
+[2024-10-10T04:40:56.276+0000] {processor.py:161} INFO - Started process (PID=443) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:40:56.287+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:40:56.289+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:40:56.288+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:40:56.319+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:40:56.345+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:40:56.345+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:40:56.369+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:40:56.369+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:40:56.388+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.123 seconds
+[2024-10-10T04:41:26.937+0000] {processor.py:161} INFO - Started process (PID=465) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:41:26.939+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:41:26.940+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:41:26.940+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:41:26.971+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:41:26.998+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:41:26.998+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:41:27.020+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:41:27.020+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:41:27.039+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.112 seconds
+[2024-10-10T04:41:57.546+0000] {processor.py:161} INFO - Started process (PID=480) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:41:57.556+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:41:57.558+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:41:57.557+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:41:57.588+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:41:57.614+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:41:57.614+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:41:57.636+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:41:57.636+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:41:57.654+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.120 seconds
+[2024-10-10T04:42:28.259+0000] {processor.py:161} INFO - Started process (PID=502) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:42:28.260+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:42:28.262+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:42:28.262+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:42:28.295+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:42:28.325+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:42:28.324+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:42:28.351+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:42:28.351+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:42:28.374+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.127 seconds
+[2024-10-10T04:42:58.875+0000] {processor.py:161} INFO - Started process (PID=517) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:42:58.876+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:42:58.878+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:42:58.877+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:42:58.908+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:42:58.934+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:42:58.934+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:42:58.957+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:42:58.956+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:42:58.977+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.114 seconds
+[2024-10-10T04:43:29.613+0000] {processor.py:161} INFO - Started process (PID=539) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:43:29.623+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:43:29.625+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:43:29.624+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:43:29.656+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:43:29.683+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:43:29.682+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:43:29.708+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:43:29.708+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:43:29.728+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.126 seconds
+[2024-10-10T04:44:00.431+0000] {processor.py:161} INFO - Started process (PID=554) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:44:00.441+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:44:00.443+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:44:00.442+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:44:00.472+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:44:00.497+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:44:00.497+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:44:00.520+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:44:00.520+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:44:00.538+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.118 seconds
+[2024-10-10T04:44:31.109+0000] {processor.py:161} INFO - Started process (PID=576) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:44:31.120+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:44:31.123+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:44:31.122+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:44:31.179+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:44:31.218+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:44:31.218+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:44:31.252+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:44:31.252+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:44:31.278+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.188 seconds
+[2024-10-10T04:45:01.821+0000] {processor.py:161} INFO - Started process (PID=591) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:45:01.832+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:45:01.834+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:45:01.834+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:45:01.866+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:45:01.892+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:45:01.892+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:45:01.915+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:45:01.914+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:45:01.933+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.125 seconds
+[2024-10-10T04:45:32.497+0000] {processor.py:161} INFO - Started process (PID=613) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:45:32.498+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:45:32.500+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:45:32.500+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:45:32.532+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:45:32.558+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:45:32.558+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:45:32.582+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:45:32.581+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:45:32.601+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.116 seconds
+[2024-10-10T04:46:03.107+0000] {processor.py:161} INFO - Started process (PID=628) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:46:03.108+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:46:03.110+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:46:03.110+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:46:03.141+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:46:03.167+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:46:03.166+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:46:03.192+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:46:03.192+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:46:03.212+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.117 seconds
+[2024-10-10T04:46:33.798+0000] {processor.py:161} INFO - Started process (PID=650) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:46:33.800+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:46:33.802+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:46:33.802+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:46:33.838+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:46:33.866+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:46:33.866+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:46:33.894+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:46:33.894+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:46:33.918+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.141 seconds
+[2024-10-10T04:47:04.337+0000] {processor.py:161} INFO - Started process (PID=665) to work on /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:47:04.348+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/user_behaviour.py for tasks to queue
+[2024-10-10T04:47:04.350+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:47:04.349+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:47:04.382+0000] {processor.py:840} INFO - DAG(s) 'user_behaviour' retrieved from /opt/airflow/dags/user_behaviour.py
+[2024-10-10T04:47:04.412+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:47:04.412+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-10T04:47:04.440+0000] {logging_mixin.py:188} INFO - [2024-10-10T04:47:04.440+0000] {dag.py:3954} INFO - Setting next_dagrun for user_behaviour to 2024-10-10 00:00:00+00:00, run_after=2024-10-11 00:00:00+00:00
+[2024-10-10T04:47:04.463+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/user_behaviour.py took 0.138 seconds

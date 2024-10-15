@@ -1,0 +1,29 @@
+[2024-10-09 17:18:16,853] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: user_behaviour.download_csv_s3 manual__2024-10-09T17:16:14.125988+00:00 [queued]>
+[2024-10-09 17:18:16,863] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: user_behaviour.download_csv_s3 manual__2024-10-09T17:16:14.125988+00:00 [queued]>
+[2024-10-09 17:18:16,863] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-09 17:18:16,863] {taskinstance.py:1357} INFO - Starting attempt 3 of 3
+[2024-10-09 17:18:16,863] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-09 17:18:16,877] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): download_csv_s3> on 2024-10-09 17:16:14.125988+00:00
+[2024-10-09 17:18:16,881] {standard_task_runner.py:52} INFO - Started process 885 to run task
+[2024-10-09 17:18:16,884] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'user_behaviour', 'download_csv_s3', 'manual__2024-10-09T17:16:14.125988+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/user_behaviour.py', '--cfg-path', '/tmp/tmpc6tka5jb', '--error-file', '/tmp/tmpe4s5jak8']
+[2024-10-09 17:18:16,884] {standard_task_runner.py:80} INFO - Job 11: Subtask download_csv_s3
+[2024-10-09 17:18:16,938] {task_command.py:370} INFO - Running <TaskInstance: user_behaviour.download_csv_s3 manual__2024-10-09T17:16:14.125988+00:00 [running]> on host acfcc9bdc161
+[2024-10-09 17:18:17,010] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@***.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_behaviour
+AIRFLOW_CTX_TASK_ID=download_csv_s3
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-09T17:16:14.125988+00:00
+AIRFLOW_CTX_TRY_NUMBER=3
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-10-09T17:16:14.125988+00:00
+[2024-10-09 17:18:17,011] {s3.py:861} INFO - Downloading source S3 file from Bucket tgou1055-utilities with path OnlineRetail.csv
+[2024-10-09 17:18:17,012] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2024-10-09 17:18:17,012] {base.py:68} INFO - Using connection ID 'aws_default' for task execution.
+[2024-10-09 17:18:17,013] {base_aws.py:206} INFO - Credentials retrieved from login
+[2024-10-09 17:18:17,013] {base_aws.py:100} INFO - Retrieving region_name from Connection.extra_config['region_name']
+[2024-10-09 17:20:17,941] {python.py:173} INFO - Done. Returned value was: None
+[2024-10-09 17:20:17,956] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=user_behaviour, task_id=download_csv_s3, execution_date=20241009T171614, start_date=20241009T171816, end_date=20241009T172017
+[2024-10-09 17:20:17,998] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-10-09 17:20:18,055] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

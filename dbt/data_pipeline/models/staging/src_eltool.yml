@@ -1,0 +1,31 @@
+version: 2
+sources:
+  - name: raw_layer
+    database: dbt_db
+    schema: dbt_schema_raw_layer
+    description: Data from application database, brought in by an EL process, and stored in snowflake raw tables
+    tables:
+      - name: customers
+        config:
+          tags: [raw_layer]
+        columns:
+          - name: customer_id
+            tests: [not_null]
+      - name: orders
+        config:
+          tags: [raw_layer]
+        columns:
+          - name: order_id
+            tests: [not_null, unique]
+          - name: customer_id
+            tests:
+              - relationships:
+                  to: source('raw_layer', 'customers')
+                  field: customer_id
+      - name: state
+        config:
+          tags: [raw_layer]
+        columns:
+          - name: state_id
+            tests: [not_null, unique]
+          

@@ -1,0 +1,90 @@
+[2024-10-09 03:10:35,461] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: user_behaviour.dbt_run scheduled__2024-10-07T00:00:00+00:00 [queued]>
+[2024-10-09 03:10:35,474] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: user_behaviour.dbt_run scheduled__2024-10-07T00:00:00+00:00 [queued]>
+[2024-10-09 03:10:35,474] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-09 03:10:35,474] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2024-10-09 03:10:35,474] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-09 03:10:35,490] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): dbt_run> on 2024-10-07 00:00:00+00:00
+[2024-10-09 03:10:35,493] {standard_task_runner.py:52} INFO - Started process 133 to run task
+[2024-10-09 03:10:35,496] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'user_behaviour', 'dbt_run', 'scheduled__2024-10-07T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/user_behaviour.py', '--cfg-path', '/tmp/tmp51llw_aw', '--error-file', '/tmp/tmp814p1xze']
+[2024-10-09 03:10:35,497] {standard_task_runner.py:80} INFO - Job 3: Subtask dbt_run
+[2024-10-09 03:10:35,552] {task_command.py:370} INFO - Running <TaskInstance: user_behaviour.dbt_run scheduled__2024-10-07T00:00:00+00:00 [running]> on host 33db15a69f99
+[2024-10-09 03:10:35,627] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@***.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_behaviour
+AIRFLOW_CTX_TASK_ID=dbt_run
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-10-07T00:00:00+00:00
+[2024-10-09 03:10:35,628] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2024-10-09 03:10:35,629] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'dbt run --project-dir /opt/***/dbt/data_pipeline --profiles-dir /opt/***/dbt/data_pipeline/profiles/']
+[2024-10-09 03:10:35,637] {subprocess.py:85} INFO - Output:
+[2024-10-09 03:10:38,106] {subprocess.py:92} INFO - Running with dbt=1.0.0-b2
+[2024-10-09 03:10:40,477] {subprocess.py:92} INFO - [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2024-10-09 03:10:40,477] {subprocess.py:92} INFO - There are 1 unused configuration paths:
+[2024-10-09 03:10:40,477] {subprocess.py:92} INFO - - models.data_pipeline.marts
+[2024-10-09 03:10:40,477] {subprocess.py:92} INFO - 
+[2024-10-09 03:10:40,493] {subprocess.py:92} INFO - Found 2 models, 3 tests, 0 snapshots, 0 analyses, 172 macros, 0 operations, 0 seed files, 2 sources, 0 exposures
+[2024-10-09 03:10:40,495] {subprocess.py:92} INFO - 
+[2024-10-09 03:10:42,359] {subprocess.py:92} INFO - 03:10:42 | Concurrency: 10 threads (target='dev')
+[2024-10-09 03:10:42,360] {subprocess.py:92} INFO - 03:10:42 |
+[2024-10-09 03:10:42,365] {subprocess.py:92} INFO - 03:10:42 | 1 of 1 START view model dbt_schema.stg_tpch_orders................... [RUN]
+[2024-10-09 03:10:43,412] {subprocess.py:92} INFO - 03:10:43 | 1 of 1 OK created view model dbt_schema.stg_tpch_orders.............. [[32mSUCCESS 1[0m in 1.05s]
+[2024-10-09 03:10:43,483] {subprocess.py:92} INFO - 03:10:43 |
+[2024-10-09 03:10:43,484] {subprocess.py:92} INFO - 03:10:43 | Finished running 1 view model in 2.99s.
+[2024-10-09 03:10:43,490] {subprocess.py:92} INFO - 
+[2024-10-09 03:10:43,490] {subprocess.py:92} INFO - [32mCompleted successfully[0m
+[2024-10-09 03:10:43,490] {subprocess.py:92} INFO - 
+[2024-10-09 03:10:43,491] {subprocess.py:92} INFO - Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[2024-10-09 03:10:43,721] {subprocess.py:96} INFO - Command exited with return code 0
+[2024-10-09 03:10:43,761] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=user_behaviour, task_id=dbt_run, execution_date=20241007T000000, start_date=20241009T031035, end_date=20241009T031043
+[2024-10-09 03:10:43,789] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-10-09 03:10:43,820] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-09 05:50:15,700] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: user_behaviour.dbt_run scheduled__2024-10-07T00:00:00+00:00 [queued]>
+[2024-10-09 05:50:15,712] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: user_behaviour.dbt_run scheduled__2024-10-07T00:00:00+00:00 [queued]>
+[2024-10-09 05:50:15,712] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-09 05:50:15,712] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2024-10-09 05:50:15,712] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-09 05:50:15,727] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): dbt_run> on 2024-10-07 00:00:00+00:00
+[2024-10-09 05:50:15,730] {standard_task_runner.py:52} INFO - Started process 266 to run task
+[2024-10-09 05:50:15,733] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'user_behaviour', 'dbt_run', 'scheduled__2024-10-07T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/user_behaviour.py', '--cfg-path', '/tmp/tmp9i9uu87g', '--error-file', '/tmp/tmp3gmyscxc']
+[2024-10-09 05:50:15,734] {standard_task_runner.py:80} INFO - Job 8: Subtask dbt_run
+[2024-10-09 05:50:15,788] {task_command.py:370} INFO - Running <TaskInstance: user_behaviour.dbt_run scheduled__2024-10-07T00:00:00+00:00 [running]> on host 82b931b01445
+[2024-10-09 05:50:15,858] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@***.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_behaviour
+AIRFLOW_CTX_TASK_ID=dbt_run
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-10-07T00:00:00+00:00
+[2024-10-09 05:50:15,859] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2024-10-09 05:50:15,860] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'dbt run --project-dir /opt/***/dbt/data_pipeline --profiles-dir /opt/***/dbt/data_pipeline/profiles/']
+[2024-10-09 05:50:15,868] {subprocess.py:85} INFO - Output:
+[2024-10-09 05:50:18,157] {subprocess.py:92} INFO - Running with dbt=1.0.0-b2
+[2024-10-09 05:50:19,362] {subprocess.py:92} INFO - [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2024-10-09 05:50:19,362] {subprocess.py:92} INFO - There are 1 unused configuration paths:
+[2024-10-09 05:50:19,362] {subprocess.py:92} INFO - - models.data_pipeline.marts
+[2024-10-09 05:50:19,362] {subprocess.py:92} INFO - 
+[2024-10-09 05:50:19,433] {subprocess.py:92} INFO - Found 2 models, 3 tests, 0 snapshots, 0 analyses, 172 macros, 0 operations, 0 seed files, 2 sources, 0 exposures
+[2024-10-09 05:50:19,434] {subprocess.py:92} INFO - 
+[2024-10-09 05:50:20,957] {subprocess.py:92} INFO - 05:50:20 | Concurrency: 10 threads (target='dev')
+[2024-10-09 05:50:20,957] {subprocess.py:92} INFO - 05:50:20 |
+[2024-10-09 05:50:20,962] {subprocess.py:92} INFO - 05:50:20 | 1 of 1 START view model dbt_schema.stg_tpch_orders................... [RUN]
+[2024-10-09 05:50:21,939] {subprocess.py:92} INFO - 05:50:21 | 1 of 1 OK created view model dbt_schema.stg_tpch_orders.............. [[32mSUCCESS 1[0m in 0.98s]
+[2024-10-09 05:50:21,986] {subprocess.py:92} INFO - 05:50:21 |
+[2024-10-09 05:50:21,986] {subprocess.py:92} INFO - 05:50:21 | Finished running 1 view model in 2.55s.
+[2024-10-09 05:50:21,993] {subprocess.py:92} INFO - 
+[2024-10-09 05:50:21,994] {subprocess.py:92} INFO - [32mCompleted successfully[0m
+[2024-10-09 05:50:21,994] {subprocess.py:92} INFO - 
+[2024-10-09 05:50:21,994] {subprocess.py:92} INFO - Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[2024-10-09 05:50:23,131] {subprocess.py:96} INFO - Command exited with return code 0
+[2024-10-09 05:50:23,172] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=user_behaviour, task_id=dbt_run, execution_date=20241007T000000, start_date=20241009T055015, end_date=20241009T055023
+[2024-10-09 05:50:23,193] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-10-09 05:50:23,225] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

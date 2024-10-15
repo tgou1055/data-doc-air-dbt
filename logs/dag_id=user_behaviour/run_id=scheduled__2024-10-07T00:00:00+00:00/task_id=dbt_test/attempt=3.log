@@ -1,0 +1,42 @@
+[2024-10-08 17:56:20,456] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: user_behaviour.dbt_test scheduled__2024-10-07T00:00:00+00:00 [queued]>
+[2024-10-08 17:56:20,467] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: user_behaviour.dbt_test scheduled__2024-10-07T00:00:00+00:00 [queued]>
+[2024-10-08 17:56:20,467] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-08 17:56:20,467] {taskinstance.py:1357} INFO - Starting attempt 3 of 3
+[2024-10-08 17:56:20,467] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-10-08 17:56:20,482] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): dbt_test> on 2024-10-07 00:00:00+00:00
+[2024-10-08 17:56:20,486] {standard_task_runner.py:52} INFO - Started process 449 to run task
+[2024-10-08 17:56:20,489] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'user_behaviour', 'dbt_test', 'scheduled__2024-10-07T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/user_behaviour.py', '--cfg-path', '/tmp/tmpwg3fv91g', '--error-file', '/tmp/tmpic6ypy8n']
+[2024-10-08 17:56:20,490] {standard_task_runner.py:80} INFO - Job 5: Subtask dbt_test
+[2024-10-08 17:56:20,507] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:525 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-10-08 17:56:20,548] {task_command.py:370} INFO - Running <TaskInstance: user_behaviour.dbt_test scheduled__2024-10-07T00:00:00+00:00 [running]> on host e289ee31b3ca
+[2024-10-08 17:56:20,621] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@***.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_behaviour
+AIRFLOW_CTX_TASK_ID=dbt_test
+AIRFLOW_CTX_EXECUTION_DATE=2024-10-07T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=3
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-10-07T00:00:00+00:00
+[2024-10-08 17:56:20,622] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2024-10-08 17:56:20,623] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cd /opt/***/dbt/data_pipeline && dbt test']
+[2024-10-08 17:56:20,630] {subprocess.py:85} INFO - Output:
+[2024-10-08 17:56:23,014] {subprocess.py:92} INFO - Running with dbt=1.0.0-b2
+[2024-10-08 17:56:23,017] {subprocess.py:92} INFO - Encountered an error while reading the project:
+[2024-10-08 17:56:23,018] {subprocess.py:92} INFO -   ERROR: Runtime Error
+[2024-10-08 17:56:23,018] {subprocess.py:92} INFO -   Could not find profile named 'data_pipeline'
+[2024-10-08 17:56:23,024] {subprocess.py:92} INFO - Encountered an error:
+[2024-10-08 17:56:23,025] {subprocess.py:92} INFO - Runtime Error
+[2024-10-08 17:56:23,025] {subprocess.py:92} INFO -   Could not run dbt
+[2024-10-08 17:56:23,132] {subprocess.py:96} INFO - Command exited with return code 2
+[2024-10-08 17:56:23,148] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2024-10-08 17:56:23,151] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=user_behaviour, task_id=dbt_test, execution_date=20241007T000000, start_date=20241008T175620, end_date=20241008T175623
+[2024-10-08 17:56:23,166] {standard_task_runner.py:97} ERROR - Failed to execute job 5 for task dbt_test (Bash command failed. The command returned a non-zero exit code 2.; 449)
+[2024-10-08 17:56:23,192] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-10-08 17:56:23,238] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
